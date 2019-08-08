@@ -7,13 +7,14 @@ import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Stream8 {
 
-    public static List<Integer> returnSquareRoot(List<Integer> numbers){
-        throw new NotImplementedException();
+    public static List<Integer> returnSquareRoot(List<Integer> numbers) {
+        return numbers.stream().map(Math::sqrt).mapToInt(Double::intValue).boxed().collect(Collectors.toList());
     }
 
     public static List<Integer> getAgeFromUsers(List<User> user){
