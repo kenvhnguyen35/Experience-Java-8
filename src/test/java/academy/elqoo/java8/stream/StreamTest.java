@@ -48,7 +48,7 @@ public class StreamTest {
     @Test
     public void shouldReturnNumberOfUsersOlderThen25() {
         List<User> users = User.getUsersWithAge(18, 20, 21, 22, 23, 24, 25, 26);
-        Integer count = Stream8.countUsersOlderThen25(users);
+        Integer count = Stream8.countUsersOlderThan25(users);
         assertTrue(count == 1);
     }
 
