@@ -10,10 +10,8 @@ import java.util.stream.Stream;
 
 public class Stream8 {
 
-    public static List<Integer> returnSquareRoot(List<Integer> numbers){
-        List<Integer> result = new ArrayList<>();
-        numbers.stream().map(Math::sqrt).forEach(d -> result.add(d.intValue()));
-        return result; // one liner maybe ???
+    public static List<Integer> returnSquareRoot(List<Integer> numbers) {
+        return numbers.stream().map(Math::sqrt).mapToInt(Double::intValue).boxed().collect(Collectors.toList());
     }
 
     public static List<Integer> getAgeFromUsers(List<User> user){
@@ -28,7 +26,7 @@ public class Stream8 {
         throw new NotImplementedException();
     }
 
-    public static Integer countUsersOlderThan25(List<User> users){
+    public static Integer countUsersOlderThen25(List<User> users){
         throw new NotImplementedException();
     }
 
