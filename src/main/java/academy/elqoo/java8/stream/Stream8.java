@@ -23,10 +23,10 @@ public class Stream8 {
     }
 
     public static List<User> getLimitedUserList(List<User> users, int limit){
-        throw new NotImplementedException();
+        return users.stream().limit(2).collect(Collectors.toList());
     }
 
-    public static Integer countUsersOlderThen25(List<User> users){
+    public static Integer countUsersOlderThan25(List<User> users){
         throw new NotImplementedException();
     }
 
